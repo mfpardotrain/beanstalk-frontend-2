@@ -1,0 +1,41 @@
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+}
+
+.arrow-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    width: auto;
+    height: 30px;
+}
+
+.arrow-chevron {
+    display: flex;
+    border: solid black;
+    border-width: 0px 2px 2px 0; 
+    width: 0px;
+    padding: 4px;
+    transform: rotate(135deg) translate(-3px, -3px);
+    border-radius: 1px;
+}
+
+.arrow-line {
+    border: solid black;
+    border-width: 2px 0 0 0;
+    width: 12px;
+    transform: translate(-5px, 0px);
+    border-radius: 2px;
+}

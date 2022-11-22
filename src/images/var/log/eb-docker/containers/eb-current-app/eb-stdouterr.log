@@ -1,0 +1,105 @@
+Attaching to code, current_db_1
+db_1   | The files belonging to this database system will be owned by user "postgres".
+db_1   | This user must also own the server process.
+db_1   | 
+db_1   | The database cluster will be initialized with locale "en_US.utf8".
+db_1   | The default database encoding has accordingly been set to "UTF8".
+db_1   | The default text search configuration will be set to "english".
+db_1   | 
+db_1   | Data page checksums are disabled.
+db_1   | 
+db_1   | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db_1   | creating subdirectories ... ok
+db_1   | selecting dynamic shared memory implementation ... posix
+db_1   | selecting default max_connections ... 100
+db_1   | selecting default shared_buffers ... 128MB
+db_1   | selecting default time zone ... Etc/UTC
+db_1   | creating configuration files ... ok
+db_1   | running bootstrap script ... ok
+db_1   | performing post-bootstrap initialization ... ok
+db_1   | syncing data to disk ... ok
+db_1   | 
+db_1   | 
+db_1   | Success. You can now start the database server using:
+db_1   | 
+db_1   |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db_1   | 
+db_1   | initdb: warning: enabling "trust" authentication for local connections
+db_1   | You can change this by editing pg_hba.conf or using the option -A, or
+db_1   | --auth-local and --auth-host, the next time you run initdb.
+db_1   | waiting for server to start....2022-02-28 00:34:11.943 UTC [47] LOG:  starting PostgreSQL 14.2 (Debian 14.2-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1   | 2022-02-28 00:34:11.946 UTC [47] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1   | 2022-02-28 00:34:11.963 UTC [48] LOG:  database system was shut down at 2022-02-28 00:34:11 UTC
+db_1   | 2022-02-28 00:34:11.971 UTC [47] LOG:  database system is ready to accept connections
+db_1   |  done
+db_1   | server started
+code   | Merging api
+code   |   Branch 0003_remove_game_solution_time
+code   |     - Alter field solution_time on game
+code   |   Branch 0002_remove_game_solution_time
+code   |     - Remove field solution_time from game
+code   | 
+code   | Merging will only work if the operations printed above do not conflict
+code   | with each other (working on different fields or models)
+code   | Do you want to merge these migration branches? [y/N] 
+code   | Created new merge migration /code/quarrel-backend/api/migrations/0004_merge_20220228_0034.py
+db_1   | CREATE DATABASE
+db_1   | 
+db_1   | 
+db_1   | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+db_1   | 
+db_1   | 2022-02-28 00:34:12.639 UTC [47] LOG:  received fast shutdown request
+db_1   | waiting for server to shut down....2022-02-28 00:34:12.641 UTC [47] LOG:  aborting any active transactions
+db_1   | 2022-02-28 00:34:12.656 UTC [47] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+db_1   | 2022-02-28 00:34:12.657 UTC [49] LOG:  shutting down
+db_1   | 2022-02-28 00:34:12.678 UTC [47] LOG:  database system is shut down
+db_1   |  done
+db_1   | server stopped
+db_1   | 
+db_1   | PostgreSQL init process complete; ready for start up.
+db_1   | 
+db_1   | 2022-02-28 00:34:12.816 UTC [1] LOG:  starting PostgreSQL 14.2 (Debian 14.2-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db_1   | 2022-02-28 00:34:12.816 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1   | 2022-02-28 00:34:12.816 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1   | 2022-02-28 00:34:12.823 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1   | 2022-02-28 00:34:12.828 UTC [61] LOG:  database system was shut down at 2022-02-28 00:34:12 UTC
+db_1   | 2022-02-28 00:34:12.839 UTC [1] LOG:  database system is ready to accept connections
+code   | Operations to perform:
+code   |   Unapply all migrations: api
+code   | Running migrations:
+code   |   Rendering model states... DONE
+code   |   Unapplying django_rest_passwordreset.0003_allow_blank_and_null_fields... OK
+code   |   Unapplying django_rest_passwordreset.0002_pk_migration... OK
+code   |   Unapplying django_rest_passwordreset.0001_initial... OK
+code   |   Unapplying authtoken.0002_auto_20160226_1747... OK
+code   |   Unapplying authtoken.0001_initial... OK
+code   |   Unapplying api.0002_remove_game_solution_time... OK
+code   |   Unapplying api.0003_remove_game_solution_time... OK
+code   |   Unapplying api.0002_auto_20220225_1918... OK
+code   |   Unapplying admin.0003_logentry_add_action_flag_choices... OK
+code   |   Unapplying admin.0002_logentry_remove_auto_add... OK
+code   |   Unapplying admin.0001_initial... OK
+code   |   Unapplying api.0001_initial... OK
+code   | Operations to perform:
+code   |   Apply all migrations: admin, api, auth, authtoken, contenttypes, django_rest_passwordreset, sessions
+code   | Running migrations:
+code   |   Applying api.0001_initial... OK
+code   |   Applying admin.0001_initial... OK
+code   |   Applying admin.0002_logentry_remove_auto_add... OK
+code   |   Applying admin.0003_logentry_add_action_flag_choices... OK
+code   |   Applying api.0002_auto_20220225_1918... OK
+code   |   Applying api.0003_remove_game_solution_time... OK
+code   |   Applying api.0002_remove_game_solution_time... OK
+code   |   Applying api.0004_merge_20220228_0034... OK
+code   |   Applying authtoken.0001_initial... OK
+code   |   Applying authtoken.0002_auto_20160226_1747... OK
+code   |   Applying django_rest_passwordreset.0001_initial... OK
+code   |   Applying django_rest_passwordreset.0002_pk_migration... OK
+code   |   Applying django_rest_passwordreset.0003_allow_blank_and_null_fields... OK
+code   | Performing system checks...
+code   | 
+code   | System check identified no issues (0 silenced).
+code   | February 28, 2022 - 00:34:15
+code   | Django version 3.0.2, using settings 'settings'
+code   | Starting development server at http://0.0.0.0:8000/
+code   | Quit the server with CONTROL-C.

@@ -1,0 +1,4 @@
+2022-02-28 00:34:07.353013 container create 9ae193095b53fbeffc6e75f95df95a103242c6ec46d1f8b751349bdf62e54ee1 (image=postgres, name=current_db_1)
+2022-02-28 00:34:08.304399 container start 9ae193095b53fbeffc6e75f95df95a103242c6ec46d1f8b751349bdf62e54ee1 (image=postgres, name=current_db_1)
+2022-02-28 00:34:08.341944 container create 8fd99e079c21d1e54af09d4bd3594d3718087cea49b65eb06ae5b89895c06a9f (image=current_web, name=code)
+2022-02-28 00:34:09.160959 container start 8fd99e079c21d1e54af09d4bd3594d3718087cea49b65eb06ae5b89895c06a9f (image=current_web, name=code)

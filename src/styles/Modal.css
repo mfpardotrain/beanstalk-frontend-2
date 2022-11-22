@@ -1,0 +1,77 @@
+.button-modal-container {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 99999;
+    height: 0px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(107, 107, 107, 0.63);
+
+}
+
+.button-modal-contents {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    opacity: 1;
+    height: 0px;
+    border-radius: 20px 20px 0 0;
+    transition: height .3s ease-in-out;
+    z-index: 1000;
+}
+
+.modal-button {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 20px);
+    margin: 20px 0px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(235, 42, 42);
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+    z-index: 1000;
+}
+
+.modal-cancel {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 20px);
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(82, 82, 82);
+    background-color: white;
+    padding: 10px;
+    border: none;
+    z-index: 1000;
+}
+
+.modal-message {
+    margin: 20px;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.show-modal {
+    visibility: visible;
+    height: 100vh;
+    z-index: 99999;
+}
+
+.show-modal-contents {
+    visibility: visible;
+    height: 330px;
+    transition: .3s ease-in-out;
+    z-index: 1000;
+}

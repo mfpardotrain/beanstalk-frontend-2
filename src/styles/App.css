@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+.App {
+  color: black;
+  font-family: 'Fredoka', Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 16px);
+}
+
+html {
+  scrollbar-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+html * {
+  font-family: 'Fredoka', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+body {
+  min-height: calc(100% - 16px);
+    overflow: hidden; 
+}
+.body {
+  background-color: rgb(245, 244, 244);
+}
+
+#root {
+  min-height: 100%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px !important;
+  }
+}
+
+:root {
+  --base-green: #c5d8b9;
+  --dark-green: rgb(148, 207, 93);
+  /* --dark-green: rgb(245, 139, 1); */
+  --dark-blue:  rgb(82, 131, 139);
+  --text-green: rgb(162, 185, 142);
+  --bold-green: #b0cc9f;
+  --light-blue: rgb(121, 171, 179); 
+  --font-color: rgb(68, 68, 68);
+  --text-grey: rgb(155, 154, 154);
+  --base-grey: rgb(228, 228, 228);
+  --button-green: #9cca7d;
+  --highlight-yellow: #F9AB55;
+  --delete-red: #e96d6d;
+}
+

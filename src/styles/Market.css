@@ -1,0 +1,393 @@
+.market-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 100%;
+}
+
+.market-list-form-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    align-items: center;
+    width: 100%;
+}
+
+.market-list-item-container {
+    display: flex;
+    width: 90%;
+    border-bottom: 1px solid grey;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.market-list-form-bottom {
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    visibility: hidden;
+}
+
+.market-form-open {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    background-color: white;
+    width: 90%;
+    border: none;
+    z-index: 999;
+    display: flex; 
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    padding: 5%;
+    height: 100%;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    box-shadow: 0px -2px 10px 1px rgb(221, 221, 221);
+    border-radius: 24px;
+    visibility: visible;
+}
+
+@keyframes bring-up {
+    0% {
+        top: 100vh;
+        position: absolute;
+        left: 0px;
+        background-color: white;
+        width: 90%;
+        border: none;
+        z-index: 999;
+        display: flex; 
+        flex-direction: column;
+        visibility: visible;
+        opacity: 1;
+        padding: 5%;
+        height: 100%;
+        overflow-y: scroll;
+        justify-content: flex-start;
+        box-shadow: 0px -2px 10px 1px rgb(221, 221, 221);
+        border-radius: 24px;
+        visibility: visible;
+    }
+    
+    100% {
+        top: 40px;
+        position: absolute;
+        left: 0px;
+        background-color: white;
+        width: 90%;
+        border: none;
+        z-index: 999;
+        display: flex; 
+        flex-direction: column;
+        visibility: visible;
+        opacity: 1;
+        padding: 5%;
+        height: 100%;
+        overflow-y: scroll;
+        justify-content: flex-start;
+        box-shadow: 0px -2px 10px 1px rgb(221, 221, 221);
+        border-radius: 24px;
+        visibility: visible;
+    }
+}
+
+.bring-up {
+    animation-name: bring-up;
+    animation-duration: .6s;
+}
+
+
+.market-form-close {
+    height: 48px;
+}
+
+.market-top-open {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+}
+
+.market-bottom-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.market-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 25%;
+}
+
+.market-list-item-container:hover {
+    cursor: pointer;
+}
+
+.market-list-item-name {
+    padding: 1px 0;
+    width: 50%;
+    font-weight: bold;
+}
+
+.market-is-active {
+    width: 30%;
+}
+
+.market-list-dropdown {
+    height: 100%;
+    width: 10%;
+}
+
+.burger-container {
+    height: 100%;
+}
+
+.burger-top-open, .burger-middle-open, .burger-bottom-open,
+.burger-top-close, .burger-middle-close, .burger-bottom-close {
+    width: 20px;
+    height: 1px;
+    margin: 30% 0px;
+    background-color: black;
+}
+
+.add-market-button {
+    background-color: var(--text-green);
+    cursor: pointer;
+    border-style: none;
+    width: 80%;
+    height: 34px;
+    font-size: 14px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 4px;
+    padding: 5px;
+    color: white;
+}
+
+.delete-button, .save-button {
+    background-color: var(--text-green);
+    cursor: pointer;
+    border-style: none;
+    width: 100%;
+    border-radius: 4px;
+    padding: 5px;
+    color: white;
+}
+
+.delete-button {
+    background-color: var(--delete-red);
+}
+
+.save-button, .delete-button {
+    width: 80px;
+}
+
+.market-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin-top: 10px;
+    align-self: center;
+}
+
+
+.dropdown-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: .3s ease-in-out;
+    width: 48px;
+    z-index: 1;
+    background-color: white;
+}
+
+.dropdown-header {
+    text-align: center;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+.cron-label {
+    padding: 4px;
+}
+
+.dropdown-open {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    height: auto;
+}
+
+.dropdown-close {
+    position: absolute;
+}
+
+.dropdown-container {
+    padding: 4px;
+    width: 50px;
+    border-radius: 4px;
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.cron-dropdown-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90px;
+
+}
+
+.dropdown-item {
+    text-align: center;
+    margin: 0px 0px 4px 0px;
+    padding: 4px;
+    width: 30px;
+}
+
+
+
+.dropdown-close {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0px;
+    height: 0px;
+}
+
+.burger-top-open {
+    transform: rotate(45deg) translateY(5px) translateX(5px);
+}
+
+.burger-top-close {
+    transform: rotate(0deg);
+}
+
+.burger-middle-open {
+    background-color: transparent;
+}
+
+.burger-bottom-open {
+    transform: rotate(-45deg) translateY(-5px) translateX(5px);
+}
+
+.cron-dropdown-container, .cron-time-dropdowns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.vegetable-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.vegetable-radio-button {
+    text-align: center;
+    border: 1px solid var(--base-green);
+    padding: 5px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    width: 90px;
+    border-radius: 5px;
+}
+
+.vegetable-button-selected, .day-button-selected {
+    background-color: var(--base-green);
+}
+
+.day-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.day-radio-button {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    width: 10%;
+    border-radius: 4px;
+}
+
+.which-vegetables {
+    padding: 4px;
+    margin: 6px 0px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
+
+.input-label {
+    font-size: 12px;
+    z-index: 1;
+    background-color: transparent;
+    margin: 0 5px;
+}
+
+.market-address-input, .available-amount-input, .suggest-input {
+    outline: none !important;
+    border-radius: 20px;
+    height: 10px;
+    padding: 8px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    caret-color: rgb(94, 94, 94);
+}
+
+.market-suggest-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.market-suggest {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.suggest-input {
+    width: 90%;
+}
+
+.suggest-button {
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.input-suggest-container {
+    width: 100%;
+}

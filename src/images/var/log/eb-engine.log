@@ -1,0 +1,501 @@
+2022/02/28 00:31:46.613836 [INFO] Starting...
+2022/02/28 00:31:46.613875 [INFO] Starting EBPlatform-PlatformEngine
+2022/02/28 00:31:46.613935 [INFO] reading event message file
+2022/02/28 00:31:46.614033 [INFO] no eb envtier info file found, skip loading env tier info.
+2022/02/28 00:31:46.614098 [INFO] Engine received EB command userdata-exec
+
+2022/02/28 00:31:46.652740 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBAutoScalingGroup --region us-east-2
+2022/02/28 00:31:47.314606 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBBeanstalkMetadata --region us-east-2
+2022/02/28 00:31:48.126014 [INFO] This is a workflow controlled instance.
+2022/02/28 00:31:48.126088 [INFO] Engine command: (env-launch)
+
+2022/02/28 00:31:48.126342 [INFO] Executing instruction: SyncClock
+2022/02/28 00:31:48.126349 [INFO] Starting SyncClock
+2022/02/28 00:31:48.126371 [INFO] Running command /bin/sh -c /usr/bin/chronyc tracking
+2022/02/28 00:31:48.138892 [INFO] Reference ID    : A9FEA97B (169.254.169.123)
+Stratum         : 4
+Ref time (UTC)  : Mon Feb 28 00:31:45 2022
+System time     : 0.000000539 seconds fast of NTP time
+Last offset     : -0.000530322 seconds
+RMS offset      : 0.000530322 seconds
+Frequency       : 0.502 ppm fast
+Residual freq   : -104.022 ppm
+Skew            : 0.732 ppm
+Root delay      : 0.000458659 seconds
+Root dispersion : 0.000604452 seconds
+Update interval : 2.0 seconds
+Leap status     : Normal
+
+2022/02/28 00:31:48.138919 [INFO] Running command /bin/sh -c /usr/bin/chronyc -a makestep
+2022/02/28 00:31:48.146924 [INFO] 200 OK
+
+2022/02/28 00:31:48.151183 [INFO] Skipping Configure OS
+2022/02/28 00:31:48.151202 [INFO] Skipping LockGUID
+2022/02/28 00:31:48.151208 [INFO] Skipping GenerateEBBanner
+2022/02/28 00:31:48.151221 [INFO] Skipping Install Process Manager
+2022/02/28 00:31:48.151227 [INFO] Skipping install proxy
+2022/02/28 00:31:48.151232 [INFO] Skipping installhealthd
+2022/02/28 00:31:48.151238 [INFO] Skipping Install Log Streaming Manager
+2022/02/28 00:31:48.151245 [INFO] Skipping install X-Ray
+2022/02/28 00:31:48.151250 [INFO] Skipping install Third Party License
+2022/02/28 00:31:48.151258 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:48.151262 [INFO] Executing instruction: installSqsd
+2022/02/28 00:31:48.151267 [INFO] This is a web server environment instance, skip install sqsd daemon ...
+2022/02/28 00:31:48.151273 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:48.151277 [INFO] Executing instruction: bootstraphealthd
+2022/02/28 00:31:48.151282 [INFO] this is an enhanced health env ...
+2022/02/28 00:31:48.151294 [INFO] Running command /bin/sh -c id -u apache
+2022/02/28 00:31:48.153668 [INFO] bootstrap healthd....
+2022/02/28 00:31:48.153682 [INFO] Running command /bin/sh -c /usr/bin/id -u healthd || /usr/sbin/useradd --user-group healthd -s /sbin/nologin --create-home
+2022/02/28 00:31:48.411704 [INFO] Skipping Install yum packages
+2022/02/28 00:31:48.411716 [INFO] Skipping install docker-compose
+2022/02/28 00:31:48.411723 [INFO] Skipping MarkBaked
+2022/02/28 00:31:48.411730 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:48.411734 [INFO] Executing instruction: TuneSystemSettings
+2022/02/28 00:31:48.411738 [INFO] Starting TuneSystemSettings
+2022/02/28 00:31:48.411743 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:48.420101 [INFO] Executing instruction: GetSetupLogRotate
+2022/02/28 00:31:48.420108 [INFO] Initialize LogRotate files and directories
+2022/02/28 00:31:48.542254 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:48.542268 [INFO] Executing instruction: BootstrapCFNHup
+2022/02/28 00:31:48.542272 [INFO] Bootstrap cfn-hup
+2022/02/28 00:31:48.558855 [INFO] Copying file /opt/elasticbeanstalk/config/private/aws-eb-command-handler.conf to /etc/cfn/hooks.d/aws-eb-command-handler.conf
+2022/02/28 00:31:48.572899 [INFO] Executing instruction: StartCFNHup
+2022/02/28 00:31:48.572920 [INFO] Start cfn-hup
+2022/02/28 00:31:48.572945 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2022/02/28 00:31:48.576891 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2022/02/28 00:31:48.587272 [INFO] Running command /bin/sh -c systemctl show -p PartOf cfn-hup.service
+2022/02/28 00:31:48.618378 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/02/28 00:31:48.765466 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/02/28 00:31:48.776706 [INFO] Running command /bin/sh -c systemctl is-enabled aws-eb.target
+2022/02/28 00:31:48.807156 [INFO] Running command /bin/sh -c systemctl enable aws-eb.target
+2022/02/28 00:31:48.956552 [INFO] Running command /bin/sh -c systemctl start aws-eb.target
+2022/02/28 00:31:48.961243 [INFO] Running command /bin/sh -c systemctl enable cfn-hup.service
+2022/02/28 00:31:49.107696 [INFO] Running command /bin/sh -c systemctl show -p PartOf cfn-hup.service
+2022/02/28 00:31:49.121254 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2022/02/28 00:31:49.133019 [INFO] Running command /bin/sh -c systemctl start cfn-hup.service
+2022/02/28 00:31:49.208365 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:49.208379 [INFO] Executing instruction: SetupPublishLogCronjob
+2022/02/28 00:31:49.208383 [INFO] Setup publish logs cron job...
+2022/02/28 00:31:49.208388 [INFO] Copying file /opt/elasticbeanstalk/config/private/logtasks/cron/publishlogs to /etc/cron.d/publishlogs
+2022/02/28 00:31:49.209959 [INFO] Executing instruction: Start Docker
+2022/02/28 00:31:49.209967 [INFO] Starting Docker...
+2022/02/28 00:31:49.210003 [INFO] Copying file /opt/elasticbeanstalk/config/private/docker-log.conf to /etc/systemd/system/docker.service.d/docker-log.conf
+2022/02/28 00:31:49.225958 [INFO] Copying file /opt/elasticbeanstalk/config/private/docker-rsyslog.conf to /etc/rsyslog.d/docker-log.conf
+2022/02/28 00:31:49.235103 [INFO] Running command /bin/sh -c systemctl restart rsyslog.service
+2022/02/28 00:31:49.264052 [INFO] Running command /bin/sh -c systemctl show -p PartOf docker.service
+2022/02/28 00:31:49.298526 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/02/28 00:31:49.464521 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/02/28 00:31:49.479688 [INFO] Running command /bin/sh -c systemctl show -p PartOf docker.service
+2022/02/28 00:31:49.503259 [INFO] Running command /bin/sh -c systemctl is-active docker.service
+2022/02/28 00:31:49.518408 [INFO] Running command /bin/sh -c systemctl start docker.service
+2022/02/28 00:31:54.034717 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:54.034731 [INFO] Executing instruction: Setup Docker Options
+2022/02/28 00:31:54.034735 [INFO] Setting up configurations for docker platform
+2022/02/28 00:31:54.043974 [INFO] Running command /bin/sh -c systemctl show -p PartOf eb-docker-events.service
+2022/02/28 00:31:54.056885 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/02/28 00:31:54.127891 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/02/28 00:31:54.133304 [INFO] Running command /bin/sh -c systemctl enable eb-docker-events.service
+2022/02/28 00:31:54.211466 [INFO] Running command /bin/sh -c systemctl show -p PartOf eb-docker-events.service
+2022/02/28 00:31:54.218462 [INFO] Running command /bin/sh -c systemctl is-active eb-docker-events.service
+2022/02/28 00:31:54.222058 [INFO] Running command /bin/sh -c systemctl start eb-docker-events.service
+2022/02/28 00:31:54.262607 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:54.262621 [INFO] Executing instruction: MarkBootstrapped
+2022/02/28 00:31:54.262626 [INFO] Starting MarkBootstrapped
+2022/02/28 00:31:54.262631 [INFO] Instance has NOT been bootstrapped
+2022/02/28 00:31:54.262688 [INFO] Marked instance as Bootstrapped
+2022/02/28 00:31:54.262708 [INFO] Executing instruction: Save CFN Stack Info
+2022/02/28 00:31:54.262748 [INFO] Starting SwitchCFNStack
+2022/02/28 00:31:54.262761 [INFO] Executing cleanup logic
+2022/02/28 00:31:54.262772 [INFO] Platform Engine finished execution on command: env-launch
+
+2022/02/28 00:32:52.378047 [INFO] Starting...
+2022/02/28 00:32:52.378090 [INFO] Starting EBPlatform-PlatformEngine
+2022/02/28 00:32:52.378110 [INFO] reading event message file
+2022/02/28 00:32:52.378204 [INFO] no eb envtier info file found, skip loading env tier info.
+2022/02/28 00:32:52.378273 [INFO] Engine received EB command cfn-hup-exec
+
+2022/02/28 00:32:52.463550 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBAutoScalingGroup --region us-east-2
+2022/02/28 00:32:52.780426 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBBeanstalkMetadata --region us-east-2
+2022/02/28 00:32:53.088267 [INFO] checking whether command app-deploy is applicable to this instance...
+2022/02/28 00:32:53.088281 [INFO] this command is applicable to the instance, thus instance should execute command
+2022/02/28 00:32:53.088286 [INFO] Engine command: (app-deploy)
+
+2022/02/28 00:32:53.088292 [INFO] Downloading EB Application...
+2022/02/28 00:32:53.088295 [INFO] Region: us-east-2
+2022/02/28 00:32:53.088299 [INFO] envID: e-hqw6zumzfp
+2022/02/28 00:32:53.088303 [INFO] envBucket: elasticbeanstalk-us-east-2-765477932160
+2022/02/28 00:32:53.088307 [INFO] Using manifest file name from command request
+2022/02/28 00:32:53.088314 [INFO] Unable to get version manifest file.
+2022/02/28 00:32:53.088318 [INFO] Downloading latest manifest available.
+2022/02/28 00:32:53.088321 [INFO] Download latest app version manifest
+2022/02/28 00:32:53.088398 [INFO] resources/environments/e-hqw6zumzfp/_runtime/versions/manifest
+2022/02/28 00:32:53.130236 [INFO] latestManifest key *: resources/environments/e-hqw6zumzfp/_runtime/versions/manifest_1646007297613
+
+2022/02/28 00:32:53.130410 [INFO] Downloading: bucket: elasticbeanstalk-us-east-2-765477932160, object: /resources/environments/e-hqw6zumzfp/_runtime/versions/manifest_1646007297613
+2022/02/28 00:32:53.147746 [INFO] Download successful107bytes downloaded
+2022/02/28 00:32:53.147826 [INFO] Trying to read and parse version manifest...
+2022/02/28 00:32:53.147912 [INFO] Downloading: bucket: elasticbeanstalk-us-east-2-765477932160, object: /resources/environments/e-hqw6zumzfp/_runtime/_versions/quarrel-backend/Sample Application-23
+2022/02/28 00:32:53.158922 [INFO] Download successful69833bytes downloaded
+2022/02/28 00:32:53.159155 [INFO] Executing instruction: ElectLeader
+2022/02/28 00:32:53.159165 [INFO] Running leader election for instance i-000b152e147eda4fd...
+2022/02/28 00:32:53.159169 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2022/02/28 00:32:53.159181 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id fa17f890-8d8e-4058-853d-18de5b4f1f11 --listener-id i-000b152e147eda4fd --region us-east-2
+2022/02/28 00:32:53.473233 [INFO] Instance is Leader.
+2022/02/28 00:32:53.473278 [INFO] Executing instruction: stopSqsd
+2022/02/28 00:32:53.473297 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2022/02/28 00:32:53.473302 [INFO] Executing instruction: PreBuildEbExtension
+2022/02/28 00:32:53.473307 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2022/02/28 00:32:53.473325 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBAutoScalingGroup --region us-east-2 --configsets Infra-EmbeddedPreBuild
+2022/02/28 00:32:53.809550 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2022/02/28 00:32:53.809574 [INFO] Executing instruction: StagedockerApplication
+2022/02/28 00:32:53.809595 [INFO] Running command /bin/sh -c docker ps -a -q -f status=running
+2022/02/28 00:32:53.848619 [INFO] Running command /bin/sh -c /bin/file -m /opt/elasticbeanstalk/config/private/beanstalk-magic -b --mime-type /opt/elasticbeanstalk/deployment/app_source_bundle
+2022/02/28 00:32:53.861552 [INFO] application/zip
+
+2022/02/28 00:32:53.861568 [INFO] app source bundle is zip file ...
+2022/02/28 00:32:53.861573 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2022/02/28 00:32:53.861584 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2022/02/28 00:32:53.895748 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2022/02/28 00:32:53.895763 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2022/02/28 00:32:53.895804 [INFO] Executing platform hooks in .platform/hooks/prebuild/
+2022/02/28 00:32:53.895826 [INFO] The dir .platform/hooks/prebuild/ does not exist
+2022/02/28 00:32:53.895846 [INFO] Executing instruction: Generate environment file
+2022/02/28 00:32:53.895909 [INFO] Executing instruction: Docker Specific Build Application
+2022/02/28 00:32:53.895914 [INFO] start build docker app
+2022/02/28 00:32:53.895918 [INFO] detected new app as docker compose app
+2022/02/28 00:32:53.895933 [INFO] Running command /bin/sh -c docker-compose config
+2022/02/28 00:32:56.813489 [INFO] Running command /bin/sh -c docker-compose config --services
+2022/02/28 00:32:57.318657 [INFO] db
+web
+
+2022/02/28 00:32:57.318818 [INFO] fetching image names from Dockerfile /var/app/staging/Dockerfile
+2022/02/28 00:32:57.318874 [INFO] found images [python:3.8] in Dockerfile /var/app/staging/Dockerfile
+2022/02/28 00:32:57.318892 [INFO] Running command /bin/sh -c docker-compose pull
+2022/02/28 00:33:09.588688 [INFO] successfully execute command: docker-compose pull
+2022/02/28 00:33:09.588757 [INFO] Running command /bin/sh -c docker-compose build
+2022/02/28 00:34:02.939787 [INFO] Sending build context to Docker daemon  212.5kB
+Step 1/8 : FROM python:3.8
+3.8: Pulling from library/python
+0c6b8ff8c37e: Pulling fs layer
+412caad352a3: Pulling fs layer
+e6d3e61f7a50: Pulling fs layer
+461bb1d8c517: Pulling fs layer
+808edda3c2e8: Pulling fs layer
+724cfd2dc19b: Pulling fs layer
+d5ecac12bcee: Pulling fs layer
+404faa91ca52: Pulling fs layer
+dc2d66408fbd: Pulling fs layer
+461bb1d8c517: Waiting
+808edda3c2e8: Waiting
+724cfd2dc19b: Waiting
+d5ecac12bcee: Waiting
+404faa91ca52: Waiting
+dc2d66408fbd: Waiting
+412caad352a3: Verifying Checksum
+412caad352a3: Download complete
+e6d3e61f7a50: Verifying Checksum
+e6d3e61f7a50: Download complete
+0c6b8ff8c37e: Verifying Checksum
+0c6b8ff8c37e: Download complete
+461bb1d8c517: Verifying Checksum
+461bb1d8c517: Download complete
+d5ecac12bcee: Verifying Checksum
+d5ecac12bcee: Download complete
+724cfd2dc19b: Verifying Checksum
+724cfd2dc19b: Download complete
+404faa91ca52: Verifying Checksum
+404faa91ca52: Download complete
+dc2d66408fbd: Verifying Checksum
+dc2d66408fbd: Download complete
+808edda3c2e8: Verifying Checksum
+808edda3c2e8: Download complete
+0c6b8ff8c37e: Pull complete
+412caad352a3: Pull complete
+e6d3e61f7a50: Pull complete
+461bb1d8c517: Pull complete
+808edda3c2e8: Pull complete
+724cfd2dc19b: Pull complete
+d5ecac12bcee: Pull complete
+404faa91ca52: Pull complete
+dc2d66408fbd: Pull complete
+Digest: sha256:c0fd64027a833c0caaf950ff6e4480d7cc1595991d9824f1114cd35765772b36
+Status: Downloaded newer image for python:3.8
+ ---> d5453fc7b6f7
+Step 2/8 : ENV PYTHONUNBUFFERED 1
+ ---> Running in 33eec4808e1e
+Removing intermediate container 33eec4808e1e
+ ---> 4ed107115bad
+Step 3/8 : RUN mkdir /code
+ ---> Running in 9205bc6f1e64
+Removing intermediate container 9205bc6f1e64
+ ---> 51bf7a366b72
+Step 4/8 : WORKDIR /code
+ ---> Running in 1631462a6fc6
+Removing intermediate container 1631462a6fc6
+ ---> c49c101a3d84
+Step 5/8 : ADD . /code/
+ ---> 522ecb4d3381
+Step 6/8 : RUN pip install -r requirements.txt
+ ---> Running in 1c85990559bb
+Collecting websockets
+  Downloading websockets-10.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (110 kB)
+Collecting asgiref==3.2.3
+  Downloading asgiref-3.2.3-py2.py3-none-any.whl (18 kB)
+Collecting boto3==1.12.39
+  Downloading boto3-1.12.39-py2.py3-none-any.whl (128 kB)
+Collecting certifi==2019.11.28
+  Downloading certifi-2019.11.28-py2.py3-none-any.whl (156 kB)
+Collecting chardet==3.0.4
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Collecting Django==3.0.2
+  Downloading Django-3.0.2-py3-none-any.whl (7.4 MB)
+Collecting django-cors-headers==3.2.1
+  Downloading django_cors_headers-3.2.1-py3-none-any.whl (14 kB)
+Collecting django-email-verification==0.0.7
+  Downloading django_email_verification-0.0.7-py3-none-any.whl (7.7 kB)
+Collecting django-filter==2.2.0
+  Downloading django_filter-2.2.0-py3-none-any.whl (69 kB)
+Collecting djangorestframework==3.11.0
+  Downloading djangorestframework-3.11.0-py3-none-any.whl (911 kB)
+Collecting django-rest-passwordreset==1.1.0
+  Downloading django_rest_passwordreset-1.1.0-py2.py3-none-any.whl (24 kB)
+Collecting idna==2.8
+  Downloading idna-2.8-py2.py3-none-any.whl (58 kB)
+Collecting Markdown==3.1.1
+  Downloading Markdown-3.1.1-py2.py3-none-any.whl (87 kB)
+Collecting psycopg2-binary==2.8.6
+  Downloading psycopg2_binary-2.8.6-cp38-cp38-manylinux1_x86_64.whl (3.0 MB)
+Collecting python-dateutil==2.8.1
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+Collecting pytz==2019.3
+  Downloading pytz-2019.3-py2.py3-none-any.whl (509 kB)
+Collecting requests==2.22.0
+  Downloading requests-2.22.0-py2.py3-none-any.whl (57 kB)
+Collecting six==1.15.0
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting sqlparse==0.3.0
+  Downloading sqlparse-0.3.0-py2.py3-none-any.whl (39 kB)
+Collecting unicodecsv==0.14.1
+  Downloading unicodecsv-0.14.1.tar.gz (10 kB)
+Collecting urllib3==1.25.8
+  Downloading urllib3-1.25.8-py2.py3-none-any.whl (125 kB)
+Collecting botocore<1.16.0,>=1.15.39
+  Downloading botocore-1.15.49-py2.py3-none-any.whl (6.2 MB)
+Collecting jmespath<1.0.0,>=0.7.1
+  Downloading jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+Collecting s3transfer<0.4.0,>=0.3.0
+  Downloading s3transfer-0.3.7-py2.py3-none-any.whl (73 kB)
+Requirement already satisfied: setuptools>=36 in /usr/local/lib/python3.8/site-packages (from Markdown==3.1.1->-r requirements.txt (line 13)) (57.5.0)
+Collecting docutils<0.16,>=0.10
+  Downloading docutils-0.15.2-py3-none-any.whl (547 kB)
+Building wheels for collected packages: unicodecsv
+  Building wheel for unicodecsv (setup.py): started
+  Building wheel for unicodecsv (setup.py): finished with status 'done'
+  Created wheel for unicodecsv: filename=unicodecsv-0.14.1-py3-none-any.whl size=10768 sha256=0070986bb8dc000837fe5e95057cc9d4542cc4a2e1266466fd745da5e07dd73a
+  Stored in directory: /root/.cache/pip/wheels/35/dd/44/ccb37563a01457f5de74ccedccaee81b01a53e12addeab5e0f
+Successfully built unicodecsv
+Installing collected packages: six, urllib3, python-dateutil, jmespath, docutils, sqlparse, pytz, botocore, asgiref, s3transfer, idna, Django, chardet, certifi, websockets, unicodecsv, requests, psycopg2-binary, Markdown, djangorestframework, django-rest-passwordreset, django-filter, django-email-verification, django-cors-headers, boto3
+Successfully installed Django-3.0.2 Markdown-3.1.1 asgiref-3.2.3 boto3-1.12.39 botocore-1.15.49 certifi-2019.11.28 chardet-3.0.4 django-cors-headers-3.2.1 django-email-verification-0.0.7 django-filter-2.2.0 django-rest-passwordreset-1.1.0 djangorestframework-3.11.0 docutils-0.15.2 idna-2.8 jmespath-0.10.0 psycopg2-binary-2.8.6 python-dateutil-2.8.1 pytz-2019.3 requests-2.22.0 s3transfer-0.3.7 six-1.15.0 sqlparse-0.3.0 unicodecsv-0.14.1 urllib3-1.25.8 websockets-10.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: You are using pip version 21.2.4; however, version 22.0.3 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[0mRemoving intermediate container 1c85990559bb
+ ---> ebc7462c2fab
+Step 7/8 : EXPOSE 8000
+ ---> Running in 42d0221486d1
+Removing intermediate container 42d0221486d1
+ ---> f5787fa6d8af
+Step 8/8 : CMD python /code/quarrel-backend/manage.py runserver 0.0.0.0:8000
+ ---> Running in 203151f33f2c
+Removing intermediate container 203151f33f2c
+ ---> 8197115dafcd
+Successfully built 8197115dafcd
+Successfully tagged staging_web:latest
+
+2022/02/28 00:34:02.940320 [INFO] successfully execute command: docker-compose build
+2022/02/28 00:34:02.940327 [INFO] successfully build docker images
+2022/02/28 00:34:02.940335 [INFO] Executing instruction: configure X-Ray
+2022/02/28 00:34:02.940341 [INFO] X-Ray is not enabled.
+2022/02/28 00:34:02.940346 [INFO] Executing instruction: configure proxy Nginx
+2022/02/28 00:34:02.953369 [INFO] Executing instruction: configure healthd specific proxy conf
+2022/02/28 00:34:02.957969 [INFO] Running command /bin/sh -c systemctl show -p PartOf healthd.service
+2022/02/28 00:34:02.977559 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/02/28 00:34:03.087348 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/02/28 00:34:03.094486 [INFO] Running command /bin/sh -c systemctl is-enabled aws-eb.target
+2022/02/28 00:34:03.098079 [INFO] Running command /bin/sh -c systemctl enable aws-eb.target
+2022/02/28 00:34:03.178934 [INFO] Running command /bin/sh -c systemctl start aws-eb.target
+2022/02/28 00:34:03.186714 [INFO] Running command /bin/sh -c systemctl enable healthd.service
+2022/02/28 00:34:03.258522 [INFO] Running command /bin/sh -c systemctl show -p PartOf healthd.service
+2022/02/28 00:34:03.268872 [INFO] Running command /bin/sh -c systemctl is-active healthd.service
+2022/02/28 00:34:03.272645 [INFO] Running command /bin/sh -c systemctl start healthd.service
+2022/02/28 00:34:03.317179 [INFO] Copying file /opt/elasticbeanstalk/config/private/healthd/healthd_logformat.conf to /var/proxy/staging/nginx/conf.d/healthd_logformat.conf
+2022/02/28 00:34:03.319825 [INFO] Copying file /opt/elasticbeanstalk/config/private/healthd/healthd_nginx.conf to /var/proxy/staging/nginx/conf.d/elasticbeanstalk/healthd.conf
+2022/02/28 00:34:03.323410 [INFO] Executing instruction: configure log streaming
+2022/02/28 00:34:03.323421 [INFO] log streaming is not enabled
+2022/02/28 00:34:03.323425 [INFO] disable log stream
+2022/02/28 00:34:03.323438 [INFO] Running command /bin/sh -c systemctl show -p PartOf amazon-cloudwatch-agent.service
+2022/02/28 00:34:03.331608 [INFO] Running command /bin/sh -c systemctl stop amazon-cloudwatch-agent.service
+2022/02/28 00:34:03.336820 [INFO] Executing instruction: GetToggleForceRotate
+2022/02/28 00:34:03.336832 [INFO] Checking if logs need forced rotation
+2022/02/28 00:34:03.336849 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBAutoScalingGroup --region us-east-2
+2022/02/28 00:34:03.871372 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBBeanstalkMetadata --region us-east-2
+2022/02/28 00:34:04.231663 [INFO] Procfile not found. Generating default rsyslog config
+2022/02/28 00:34:04.235302 [INFO] Running command /bin/sh -c systemctl restart rsyslog.service
+2022/02/28 00:34:04.275913 [INFO] Executing instruction: Configure Docker Logging
+2022/02/28 00:34:04.299365 [INFO] Executing instruction: PostBuildEbExtension
+2022/02/28 00:34:04.299388 [INFO] Starting executing the config set Infra-EmbeddedPostBuild.
+2022/02/28 00:34:04.299403 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBAutoScalingGroup --region us-east-2 --configsets Infra-EmbeddedPostBuild
+2022/02/28 00:34:04.751938 [INFO] Finished executing the config set Infra-EmbeddedPostBuild.
+
+2022/02/28 00:34:04.751968 [INFO] Executing instruction: CleanEbExtensions
+2022/02/28 00:34:04.751988 [INFO] Cleaned ebextensions subdirectories from app staging directory.
+2022/02/28 00:34:04.752005 [INFO] Executing instruction: RunAppDeployPreDeployHooks
+2022/02/28 00:34:04.752026 [INFO] Executing platform hooks in .platform/hooks/predeploy/
+2022/02/28 00:34:04.752056 [INFO] The dir .platform/hooks/predeploy/ does not exist
+2022/02/28 00:34:04.752063 [INFO] Executing instruction: stop X-Ray
+2022/02/28 00:34:04.752067 [INFO] stop X-Ray ...
+2022/02/28 00:34:04.752079 [INFO] Running command /bin/sh -c systemctl show -p PartOf xray.service
+2022/02/28 00:34:04.759535 [WARN] stopProcess Warning: process xray is not registered 
+2022/02/28 00:34:04.759562 [INFO] Running command /bin/sh -c systemctl stop xray.service
+2022/02/28 00:34:04.767136 [INFO] Executing instruction: Run Docker Container
+2022/02/28 00:34:04.767154 [INFO] this is the first time deploying app...
+2022/02/28 00:34:04.767174 [INFO] detected new app is docker compose app
+2022/02/28 00:34:04.767184 [INFO] Running command /bin/sh -c systemctl show -p PartOf eb-docker-compose-events.service
+2022/02/28 00:34:04.776139 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/02/28 00:34:04.872108 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/02/28 00:34:04.876676 [INFO] Running command /bin/sh -c systemctl enable eb-docker-compose-events.service
+2022/02/28 00:34:04.968423 [INFO] Running command /bin/sh -c systemctl show -p PartOf eb-docker-compose-events.service
+2022/02/28 00:34:04.975663 [INFO] Running command /bin/sh -c systemctl is-active eb-docker-compose-events.service
+2022/02/28 00:34:04.979299 [INFO] Running command /bin/sh -c systemctl start eb-docker-compose-events.service
+2022/02/28 00:34:05.048789 [INFO] Running command /bin/sh -c docker images | sed 1d
+2022/02/28 00:34:05.236187 [INFO] staging_web   latest    8197115dafcd   3 seconds ago   1.03GB
+python        3.8       d5453fc7b6f7   2 days ago      909MB
+postgres      latest    6a3c44872108   13 days ago     374MB
+
+2022/02/28 00:34:05.236217 [INFO] tag image with command docker tag 8197115dafcd current_web:latest
+2022/02/28 00:34:05.236229 [INFO] Running command /bin/sh -c docker tag 8197115dafcd current_web:latest
+2022/02/28 00:34:05.327543 [INFO] Running command /bin/sh -c docker rmi staging_web
+2022/02/28 00:34:05.415374 [INFO] Untagged: staging_web:latest
+
+2022/02/28 00:34:05.415397 [INFO] Running command /bin/sh -c docker-compose up -d
+2022/02/28 00:34:09.310064 [INFO] Running command /bin/sh -c systemctl show -p PartOf eb-docker-compose-log.service
+2022/02/28 00:34:09.321549 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/02/28 00:34:09.431800 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/02/28 00:34:09.443646 [INFO] Running command /bin/sh -c systemctl enable eb-docker-compose-log.service
+2022/02/28 00:34:09.555574 [INFO] Running command /bin/sh -c systemctl show -p PartOf eb-docker-compose-log.service
+2022/02/28 00:34:09.577728 [INFO] Running command /bin/sh -c systemctl is-active eb-docker-compose-log.service
+2022/02/28 00:34:09.581496 [INFO] Running command /bin/sh -c systemctl start eb-docker-compose-log.service
+2022/02/28 00:34:09.679390 [INFO] Running command /bin/sh -c docker-compose ps -q
+2022/02/28 00:34:12.014187 [INFO] 8fd99e079c21d1e54af09d4bd3594d3718087cea49b65eb06ae5b89895c06a9f
+9ae193095b53fbeffc6e75f95df95a103242c6ec46d1f8b751349bdf62e54ee1
+
+2022/02/28 00:34:12.014265 [INFO] Executing instruction: Clean up Docker
+2022/02/28 00:34:12.014279 [INFO] Running command /bin/sh -c docker ps -aq
+2022/02/28 00:34:12.099161 [INFO] 8fd99e079c21
+9ae193095b53
+
+2022/02/28 00:34:12.099191 [INFO] Running command /bin/sh -c docker images | sed 1d
+2022/02/28 00:34:12.188409 [INFO] current_web   latest    8197115dafcd   10 seconds ago   1.03GB
+python        3.8       d5453fc7b6f7   2 days ago       909MB
+postgres      latest    6a3c44872108   13 days ago      374MB
+
+2022/02/28 00:34:12.188437 [INFO] save docker tag command: docker tag 8197115dafcd current_web:latest
+2022/02/28 00:34:12.188452 [INFO] save docker tag command: docker tag d5453fc7b6f7 python:3.8
+2022/02/28 00:34:12.188456 [INFO] save docker tag command: docker tag 6a3c44872108 postgres:latest
+2022/02/28 00:34:12.188467 [INFO] Running command /bin/sh -c docker rm `docker ps -aq`
+2022/02/28 00:34:12.348549 [INFO] Running command /bin/sh -c docker rmi `docker images -aq`
+2022/02/28 00:34:12.533657 [INFO] restore docker image name with command: docker tag 8197115dafcd current_web:latest
+2022/02/28 00:34:12.533676 [INFO] Running command /bin/sh -c docker tag 8197115dafcd current_web:latest
+2022/02/28 00:34:12.627088 [INFO] restore docker image name with command: docker tag d5453fc7b6f7 python:3.8
+2022/02/28 00:34:12.627111 [INFO] Running command /bin/sh -c docker tag d5453fc7b6f7 python:3.8
+2022/02/28 00:34:12.719172 [INFO] restore docker image name with command: docker tag 6a3c44872108 postgres:latest
+2022/02/28 00:34:12.719205 [INFO] Running command /bin/sh -c docker tag 6a3c44872108 postgres:latest
+2022/02/28 00:34:12.803172 [INFO] Executing instruction: start X-Ray
+2022/02/28 00:34:12.803190 [INFO] X-Ray is not enabled.
+2022/02/28 00:34:12.803194 [INFO] Executing instruction: configureSqsd
+2022/02/28 00:34:12.803207 [INFO] This is a web server environment instance, skip configure sqsd daemon ...
+2022/02/28 00:34:12.803211 [INFO] Executing instruction: startSqsd
+2022/02/28 00:34:12.803215 [INFO] This is a web server environment instance, skip start sqsd daemon ...
+2022/02/28 00:34:12.803220 [INFO] Executing instruction: Track pids in healthd
+2022/02/28 00:34:12.803224 [INFO] This is an enhanced health env...
+2022/02/28 00:34:12.803237 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf aws-eb.target | cut -d= -f2
+2022/02/28 00:34:12.812506 [INFO] cfn-hup.service docker.service healthd.service eb-docker-compose-log.service eb-docker-compose-events.service eb-docker-events.service
+
+2022/02/28 00:34:12.812531 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2022/02/28 00:34:12.822457 [INFO] 
+
+2022/02/28 00:34:12.827349 [INFO] Executing instruction: Configure Docker Container Logging
+2022/02/28 00:34:12.833853 [INFO] Executing instruction: RunAppDeployPostDeployHooks
+2022/02/28 00:34:12.833870 [INFO] Executing platform hooks in .platform/hooks/postdeploy/
+2022/02/28 00:34:12.833889 [INFO] The dir .platform/hooks/postdeploy/ does not exist
+2022/02/28 00:34:12.833896 [INFO] Executing cleanup logic
+2022/02/28 00:34:12.833998 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1646008452,"severity":"INFO"}]}]}
+
+2022/02/28 00:34:12.834108 [INFO] Platform Engine finished execution on command: app-deploy
+
+2022/02/28 00:37:32.268080 [INFO] Starting...
+2022/02/28 00:37:32.268154 [INFO] Starting EBPlatform-PlatformEngine
+2022/02/28 00:37:32.269918 [INFO] reading event message file
+2022/02/28 00:37:32.272938 [INFO] no eb envtier info file found, skip loading env tier info.
+2022/02/28 00:37:32.273025 [INFO] Engine received EB command cfn-hup-exec
+
+2022/02/28 00:37:32.371621 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBAutoScalingGroup --region us-east-2
+2022/02/28 00:37:32.689471 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBBeanstalkMetadata --region us-east-2
+2022/02/28 00:37:33.002596 [INFO] checking whether command tail-log is applicable to this instance...
+2022/02/28 00:37:33.002615 [INFO] this command is applicable to the instance, thus instance should execute command
+2022/02/28 00:37:33.002619 [INFO] Engine command: (tail-log)
+
+2022/02/28 00:37:33.003821 [INFO] Executing instruction: GetTailLogs
+2022/02/28 00:37:33.003839 [INFO] Tail Logs...
+2022/02/28 00:37:33.005318 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-hooks.log
+2022/02/28 00:37:33.008637 [INFO] Running command /bin/sh -c tail -n 100 /var/log/docker-events.log
+2022/02/28 00:37:33.010216 [INFO] Running command /bin/sh -c tail -n 100 /var/log/docker-compose-events.log
+2022/02/28 00:37:33.011752 [INFO] Running command /bin/sh -c tail -n 100 /var/log/docker
+2022/02/28 00:37:33.014721 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-docker/containers/eb-current-app/eb-stdouterr.log
+2022/02/28 00:37:33.016305 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+2022/02/28 00:37:33.076427 [INFO] Executing cleanup logic
+2022/02/28 00:37:33.076537 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1646008653,"severity":"INFO"}]}]}
+
+2022/02/28 00:37:33.076638 [INFO] Platform Engine finished execution on command: tail-log
+
+2022/02/28 00:41:08.895543 [INFO] Starting...
+2022/02/28 00:41:08.895587 [INFO] Starting EBPlatform-PlatformEngine
+2022/02/28 00:41:08.895606 [INFO] reading event message file
+2022/02/28 00:41:08.895702 [INFO] no eb envtier info file found, skip loading env tier info.
+2022/02/28 00:41:08.895766 [INFO] Engine received EB command cfn-hup-exec
+
+2022/02/28 00:41:08.974552 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBAutoScalingGroup --region us-east-2
+2022/02/28 00:41:09.328312 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBBeanstalkMetadata --region us-east-2
+2022/02/28 00:41:09.685733 [INFO] checking whether command tail-log is applicable to this instance...
+2022/02/28 00:41:09.685747 [INFO] this command is applicable to the instance, thus instance should execute command
+2022/02/28 00:41:09.685751 [INFO] Engine command: (tail-log)
+
+2022/02/28 00:41:09.685799 [INFO] Executing instruction: GetTailLogs
+2022/02/28 00:41:09.685804 [INFO] Tail Logs...
+2022/02/28 00:41:09.686132 [INFO] Running command /bin/sh -c tail -n 100 /var/log/docker
+2022/02/28 00:41:09.687861 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-docker/containers/eb-current-app/eb-stdouterr.log
+2022/02/28 00:41:09.689381 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+2022/02/28 00:41:09.690889 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-hooks.log
+2022/02/28 00:41:09.692340 [INFO] Running command /bin/sh -c tail -n 100 /var/log/docker-events.log
+2022/02/28 00:41:09.693839 [INFO] Running command /bin/sh -c tail -n 100 /var/log/docker-compose-events.log
+2022/02/28 00:41:09.751219 [INFO] Executing cleanup logic
+2022/02/28 00:41:09.751326 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1646008869,"severity":"INFO"}]}]}
+
+2022/02/28 00:41:09.751343 [INFO] Platform Engine finished execution on command: tail-log
+
+2022/02/28 00:41:46.014931 [INFO] Starting...
+2022/02/28 00:41:46.015023 [INFO] Starting EBPlatform-PlatformEngine
+2022/02/28 00:41:46.015046 [INFO] reading event message file
+2022/02/28 00:41:46.015156 [INFO] no eb envtier info file found, skip loading env tier info.
+2022/02/28 00:41:46.015222 [INFO] Engine received EB command cfn-hup-exec
+
+2022/02/28 00:41:46.093474 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBAutoScalingGroup --region us-east-2
+2022/02/28 00:41:46.405116 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:765477932160:stack/awseb-e-hqw6zumzfp-stack/a12e7750-982d-11ec-943c-0aa36f14ef94 -r AWSEBBeanstalkMetadata --region us-east-2
+2022/02/28 00:41:46.716170 [INFO] checking whether command bundle-log is applicable to this instance...
+2022/02/28 00:41:46.716184 [INFO] this command is applicable to the instance, thus instance should execute command
+2022/02/28 00:41:46.716189 [INFO] Engine command: (bundle-log)
+
+2022/02/28 00:41:46.716237 [INFO] Executing instruction: GetBundleLogs
+2022/02/28 00:41:46.716242 [INFO] Bundle Logs...

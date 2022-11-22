@@ -1,0 +1,40 @@
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.order-list-container {
+    width: 100%;
+}
+
+.order-summary-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+}
+
+.order-farm {
+    font-weight: bold;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.order-close {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0px;
+    height: 0px;
+}

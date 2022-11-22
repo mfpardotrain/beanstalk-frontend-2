@@ -1,0 +1,114 @@
+.signup-container {
+    position: fixed;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 89px); 
+    overflow-y: scroll;
+    width: calc(100% - 16px);
+}
+
+.account-choice-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+}
+
+.account-choice-question, .account-choice-item {
+    width: 100%;
+    font-size: 40px;
+} 
+
+.account-choice-item {
+    margin-top: 40px;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    width: 80%;
+}
+
+.signup-input {
+    outline: none !important;
+    border-radius: 20px;
+    height: 10px;
+    padding: 8px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    caret-color: rgb(94, 94, 94);
+}
+
+.signup-form-container {
+    height: 100%;
+    width: 100%;
+}
+
+.signup-form-header {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.signup-input {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.signup-input-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.signup-notifiable {
+    margin: 0 8px 0 0; 
+    font-size: 20px;
+}
+
+.login-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-input-label {
+    width: 240px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+@keyframes opacity-fade {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation-name: opacity-fade;
+    animation-duration: 3s;
+}
+
+.api-response {
+    visibility: hidden;
+    background-color: rgb(250, 152, 152);
+    position: fixed;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+    top: 30%;
+    opacity: 0;
+    z-index: 999;
+}

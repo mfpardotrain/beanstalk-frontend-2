@@ -1,0 +1,3 @@
+Feb 28 00:31:41 ip-172-31-10-0 crond[2950]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 79% if used.)
+Feb 28 00:31:41 ip-172-31-10-0 crond[2950]: (CRON) INFO (running with inotify support)
+Feb 28 00:40:01 ip-172-31-10-0 CROND[5255]: (root) CMD (/usr/lib64/sa/sa1 1 1)

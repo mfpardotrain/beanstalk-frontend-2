@@ -1,0 +1,21 @@
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.188436603Z" level=info msg="Starting up"
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.192678797Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.193016292Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.193396055Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///run/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.193659261Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.199675077Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.199959053Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.200222306Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///run/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.200472548Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.315462895Z" level=info msg="Loading containers: start."
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.584833640Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.644316196Z" level=info msg="Loading containers: done."
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.995105391Z" level=info msg="Docker daemon" commit=b0f5bc3 graphdriver(s)=overlay2 version=20.10.7
+Feb 28 00:31:53 ip-172-31-10-0 docker: time="2022-02-28T00:31:53.996241870Z" level=info msg="Daemon has completed initialization"
+Feb 28 00:31:54 ip-172-31-10-0 docker: time="2022-02-28T00:31:54.056603268Z" level=info msg="API listen on /run/docker.sock"
+Feb 28 00:33:39 ip-172-31-10-0 docker: time="2022-02-28T00:33:39.550612215Z" level=info msg="Layer sha256:31b8a61e8cf95c37d9b7a2f9a19ba6cafb916f6df1adc4189bc4fbb498a4524f cleaned up"
+Feb 28 00:33:41 ip-172-31-10-0 docker: time="2022-02-28T00:33:41.202905917Z" level=info msg="ignoring event" container=9205bc6f1e648663a48f08abf1cc3d1fbbe635c6828237d9c756171b92e868f2 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Feb 28 00:33:41 ip-172-31-10-0 docker: time="2022-02-28T00:33:41.469872120Z" level=info msg="Layer sha256:dd258ada58c53ad75687d1636b9800acabcf5e3314eb0a1b52104e1461fafb78 cleaned up"
+Feb 28 00:33:54 ip-172-31-10-0 docker: time="2022-02-28T00:33:54.587973870Z" level=info msg="ignoring event" container=1c85990559bb15935f5b8ab839993aca1c25e48d47221b1311ae8818766f1507 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Feb 28 00:34:02 ip-172-31-10-0 docker: time="2022-02-28T00:34:02.732933530Z" level=info msg="Layer sha256:2ec95cb2a9b5357eb9137ac232d0658e4ba905db4de0f285b20f8a7921ecd224 cleaned up"
+Feb 28 00:34:02 ip-172-31-10-0 docker: time="2022-02-28T00:34:02.845262986Z" level=info msg="Layer sha256:2ec95cb2a9b5357eb9137ac232d0658e4ba905db4de0f285b20f8a7921ecd224 cleaned up"

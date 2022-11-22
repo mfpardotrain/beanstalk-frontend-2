@@ -1,0 +1,40 @@
+.available-amount-input-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 105px;
+}
+.available-amount-input {
+    text-align: center;
+    width: 40%;
+}
+
+.available-amount-button {
+    height: 30%;
+    width: 40%;
+    margin: 0;
+}
+
+.price-weight-max-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.price-weight-max-input-container {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-header, .dropdown-item {
+    font-size: 12px;
+}
+
+.dropdown-container {
+    padding: 0px;
+}
