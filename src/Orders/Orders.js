@@ -1,16 +1,22 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, } from 'react'
 import OrderBreakdown from './OrderBreakdown.js'
+import { DefaultEffectRequest } from '../ApiUtils/DefaultRequests.js'
+import { useAuth } from '../useAuth.js'
 import '../styles/BuyVegetables.css'
 
 const Orders = (props) => {
-  const test = [
-    { id: 1, market: 'coolito market', farmer: 'joe', customer: 'john hankey', vegetables: [1, 2, 3], status: 'complete', farm: 'rillito', marketPickupDate: '12/22/1999', amount: 39.48, fee: 1.33, createdAt: '12/18/1999' },
-    { id: 2, market: 'babayaga', farmer: 'abigail', customer: 'john hankey', vegetables: [3, 4], status: 'paid', farm: 'rillito', marketPickupDate: '12/22/1999', amount: 56.88, fee: 1.33, createdAt: '12/18/1999' },
-    { id: 4, market: 'babayaga', farmer: 'joe', customer: 'john hankey', vegetables: [0, 4], status: 'paid', farm: 'rillito', marketPickupDate: '12/22/1999', amount: 39.48, fee: 1.33, createdAt: '12/18/1999' },
-    { id: 6, market: 'coolito market', farmer: 'joe', customer: 'john hankey', vegetables: [1, 5, 8, 9], status: 'complete', farm: 'rillito', marketPickupDate: '12/22/1999', amount: 39.48, fee: 1.33, createdAt: '12/18/1999' }
-  ]
+  const { authTokens } = useAuth()
 
-  const [orders, setOrders] = useState(test)
+  const [upcomingOrders, setUpcomingOrders] = useState([])
+  const [previousOrders, setPreviousOrders] = useState([])
+
+  const effectHandler = (response) => {
+    setUpcomingOrders(response.data.upcomingOrders)
+    setPreviousOrders(response.data.previousOrders)
+  }
+
+  const [refresh, setRefresh] = useState(false)
+  DefaultEffectRequest('orderHistory/', 'GET', effectHandler, refresh, {}, "Token " + authTokens)
 
   const orderList = (array) => {
     const output = array.map(el => {
@@ -29,7 +35,7 @@ const Orders = (props) => {
         <div>
             <div className="orders-container">
                 <h3>Orders</h3>
-                {orderList(orders)}
+                {orderList(previousOrders)}
             </div>
         </div>
   )

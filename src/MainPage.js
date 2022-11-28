@@ -19,7 +19,7 @@ const MainPage = (props) => {
   const { nVegetables, cartSelected } = useCartState()
 
   useEffect(() => {
-    // setIsFarmer(localStorage.getItem("isFarmer") === "true")
+    setIsFarmer(localStorage.getItem("isFarmer") === "true")
   })
 
   useEffect(() => {
