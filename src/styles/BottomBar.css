@@ -4,6 +4,7 @@
 }
 
 .home-page-container {
+    overflow-y: scroll;
     height: calc(100% - 79px);
 }
 
