@@ -34,7 +34,9 @@ const Orders = (props) => {
   return (
         <div>
             <div className="orders-container">
-                <h3>Orders</h3>
+                <h3>Upcoming Orders</h3>
+                {orderList(upcomingOrders)}
+                <h3>Previous Orders</h3>
                 {orderList(previousOrders)}
             </div>
         </div>
